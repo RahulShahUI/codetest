@@ -1,0 +1,26 @@
+.main-contain:before{
+    content: '';
+    background-image: url(images/left-food-background.png);
+    width: 140px;
+    height: 100%;
+    top: 200px;
+    left: -13px;
+    position: absolute;
+    background-position: top;
+    background-size: 82%;
+    background-repeat: no-repeat repeat;
+    z-index: 0;
+}
+.main-contain:after{
+    content: '';
+    background-image: url(images/right-food-background.png);
+    width: 140px;
+    height: 100%;
+    top: 200px;
+    right: -13px;
+    position: absolute;
+    background-position: top;
+    background-size: 82%;
+    background-repeat: no-repeat repeat;
+    z-index: 0;
+}

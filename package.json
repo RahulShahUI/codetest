@@ -1,0 +1,94 @@
+{
+  "name": "office-snacks-mate-ui",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@material-ui/core": "^4.9.10",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.49",
+    "@material-ui/styles": "^4.3.3",
+    "@microsoft/applicationinsights-react-js": "^2.5.3",
+    "@microsoft/applicationinsights-web": "^2.5.3",
+    "axios": "^0.19.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "formik": "^2.0.6",
+    "gh-pages": "^2.1.1",
+    "group-array": "^1.0.0",
+    "html-react-parser": "^0.10.2",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.1",
+    "numeral": "^2.0.6",
+    "opencollective-postinstall": "^2.0.2",
+    "query-string": "^6.10.1",
+    "react": "^16.12.0",
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "react-app-rewired": "^2.1.3",
+    "react-bottom-scroll-listener": "^3.0.0",
+    "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.20",
+    "react-html-parser": "^2.0.2",
+    "react-image": "^2.2.1",
+    "react-otp-input": "^1.0.1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.1.1",
+    "react-select": "^3.0.8",
+    "react-swipeable-views": "^0.13.3",
+    "react-swipeable-views-utils": "^0.13.3",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "save": "^2.4.0",
+    "socketcluster-client": "^14.3.1",
+    "styled-components": "^4.4.1",
+    "typescript": "^3.6.2",
+    "yargs": "^15.3.1",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired --max_old_space_size=4096 start",
+    "build": "react-app-rewired build",
+    "test": "cross-env CI=true react-app-rewired test --silent --env=jsdom --coverage --testResultsProcessor jest-sonar-reporter",
+    "eject": "react-scripts eject",
+    "sonar": "node sonar-project.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start:dev": "env-cmd --verbose -f .env react-app-rewired --max_old_space_size=4096 start",
+    "build:dev": "env-cmd --verbose -f .env.dev cross-env NODE_PATH=./src react-app-rewired build",
+    "start:uat": "env-cmd --verbose -f .env.uat react-app-rewired --max_old_space_size=4096 start",
+    "build:uat": "env-cmd --verbose -f .env.uat react-app-rewired build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "jest-sonar-reporter": "^2.0.0",
+    "sonarqube-scanner": "^2.6.0"
+  },
+  "jestSonar": {
+    "reportPath": "reports",
+    "reportFile": "TEST-RESULTS.xml",
+    "indent": 4
+  },
+  "jest": {
+    "verbose": true
+  }
+}
